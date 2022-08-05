@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bling</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <!-- sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy -->
+    <nav class="navbar">
+        <div class="container hero-section">
+            <div class="navbar-brand">
+                <a href="#"><img src="images/v2_12.png" alt="" /></a>
+            </div>
+
+            <div class="menu" style="color: black">
+                <div class="close-menu">
+                    <i class="fas fa-times"></i>
+                </div>
+                <ul class="menu-ul">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+                <div class="menu-button">
+                    <div class="login">
+                        <a href="# ">Log In</a>
+                    </div>
+
+                    <div class="sign-up">
+                        <a href="# ">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="hero">
+        <div class="container">
+            <div class="content">
+                <div class="left-area">
+                    <div class="left-area-content">
+                        <h1 style="margin-bottom: 20px; font-size: 3rem">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        </h1>
+                        <h3 style="color: #969696; margin-bottom: 20px">
+                            Pellentesque ultricies tortor id cursus lacinia. In in leo mollis, mollis ipsum vel, finibus est.
+                        </h3>
+                        <div class="cta-btn">
+                            <button class="pricing-btn">
+									<a href="#">Pricing</a>
+								</button>
+                            <button class="trial-btn">
+									<a href="#">Start Free Trial</a>
+								</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-area">
+                    <div class="image">
+                        <img src="images/v7_50.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener("load", () => {
+            let menu_btn = document.querySelector(".menu-btn");
+            let close_menu = document.querySelector(".close-menu");
+
+            menu_btn.addEventListener("click", () => {
+                document.querySelector(".menu").classList.add("active");
+                // document.querySelector(".close-menu").style.display = "block";
+            });
+            close_menu.addEventListener("click", () => {
+                document.querySelector(".menu").classList.remove("active");
+                // document.querySelector(".close-menu").style.display = "block";
+            });
+
+            let menu_ul = document.querySelector(".menu-ul").querySelectorAll("li");
+            menu_ul.forEach((element) => {
+                element.addEventListener("click", function() {
+                    menu_ul.forEach((li) => li.classList.remove("active"));
+                    this.classList.add("active");
+                });
+            });
+
+            console.log(menu_ul);
+        });
+    </script>
+</body>
+
+</html>
